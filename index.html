@@ -7,3 +7,10 @@ layout: default
 Our goal is not to recreate any services, no need to reinvent the wheel. But to provide a straightforward way to deploy best-of-breed open-source systems for data analytics to diverse infrastructures and use cases. Any use case where you have data and data driven mindset, you should be able to use ELDA. But our primary focus is log-analysis. Users will get all the tools and technology to handle log data, but you are free to leverage ELDA for any use case.
 </p>
 
+<!-- Question End                        -->
+
+<h4> What design principle or technique used in ELDA? </h4>
+<p> We adopted pipeline architecture. Tasks are divided into stages and these stages are connected to form a pipe-like structure. Instructions enter from one end and exit from another end. Pipelining increases the overall instruction throughput. 
+It allows storing and executing instructions in an orderly process. Pipelining is a technique where multiple instructions are overlapped during execution. For our purpose when we deal with logs, sometimes we have to back and forth in the, where pipeline increases the flexibility. 
+In ELDA we have two clear segregation of this process. Data Pipeline + ML Pipeline
+</p>
